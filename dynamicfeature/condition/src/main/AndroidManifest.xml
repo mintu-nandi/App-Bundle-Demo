@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.example.appbundle.condition">
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_condition">
+        <dist:delivery>
+            <dist:install-time>
+                <dist:conditions>
+
+                    <!-- To include or exclude this module by user countries, uncomment and update this section. -->
+                    <!-- Learn more @ [https://d.android.com/r/studio-ui/dynamic-delivery/conditional-delivery] -->
+                    <!-- <dist:user-countries dist:exclude="false"> -->
+                    <!-- <dist:country dist:code="US" /> -->
+                    <!-- </dist:user-countries> -->
+                    <dist:device-feature dist:name="android.hardware.camera.ar" />
+                </dist:conditions>
+            </dist:install-time>
+        </dist:delivery>
+
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application>
+        <activity android:name=".ConditionActivity"></activity>
+    </application>
+
+</manifest>

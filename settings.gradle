@@ -1,0 +1,7 @@
+include ':dynamicfeature:instant'
+include ':dynamicfeature:condition'
+include ':dynamicfeature:install'
+include ':dynamicfeature:demand'
+include ':library:utility'
+include ':app'
+rootProject.name = "App-Bundle-Demo"
